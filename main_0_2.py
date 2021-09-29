@@ -7,14 +7,15 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog
 import sys
 
 
+
 class MyMainWindow(QMainWindow,Ui_MainWindow):
     def __init__(self,parent=None):
         super(MyMainWindow, self).__init__(parent)
         self.setupUi(self)
         #BUTTONS
-        self.button_browse_cer.clicked.connect(self.browse_cer)
-        self.button_list_of_cont.clicked.connect(self.get_list_cont)
-        self.button_bind_cont_to_cert.clicked.connect(self.bind_cont_to_cert())
+        self.button_browse_cer.clicked.connect(lambda: self.browse_cer())
+        self.button_list_of_cont.clicked.connect(lambda: self.get_list_cont())
+        self.button_bind_cont_to_cert.clicked.connect(lambda: self.bind_cont_to_cert())
         self.button_exit.clicked.connect(app.exit)
 
     def get_list_cont(self):

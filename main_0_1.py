@@ -30,7 +30,6 @@ def get_list_cont():
         strings_with_substring[i] = strings_with_substring[i][pos + 1:]
         #strings_with_substring[i] = strings_with_substring[i].replace('\\', '\\\\', 2)
 
-
     list_cont.delete(0, 'end')
     for i in strings_with_substring:
         list_cont.insert(END, i)
