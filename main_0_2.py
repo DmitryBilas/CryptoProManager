@@ -16,7 +16,14 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
         self.button_browse_cer.clicked.connect(lambda: self.browse_cer())
         self.button_list_of_cont.clicked.connect(lambda: self.get_list_cont())
         self.button_bind_cont_to_cert.clicked.connect(lambda: self.bind_cont_to_cert())
+        self.button_get_lic.clicked.connect(lambda: self.get_lic())
         self.button_exit.clicked.connect(app.exit)
+
+    def get_lic(self):
+        lic = os.popen(
+            '/opt/cprocsp/sbin/amd64/cpconfig -license -view').read()
+        lic = str(lic)
+        self.output.append(lic)
 
     def get_list_cont(self):
         csptest = os.popen(

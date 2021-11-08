@@ -82,8 +82,8 @@
    <widget class="QPushButton" name="button_install_cert_into_cont">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>90</y>
+      <x>790</x>
+      <y>150</y>
       <width>241</width>
       <height>25</height>
      </rect>
@@ -95,8 +95,8 @@
    <widget class="QPushButton" name="button_bind_cont_to_cert">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>120</y>
+      <x>790</x>
+      <y>190</y>
       <width>241</width>
       <height>25</height>
      </rect>
@@ -108,8 +108,8 @@
    <widget class="QPushButton" name="button_install">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>150</y>
+      <x>790</x>
+      <y>220</y>
       <width>241</width>
       <height>25</height>
      </rect>
@@ -121,8 +121,8 @@
    <widget class="QPushButton" name="button_view_local_certs">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>180</y>
+      <x>790</x>
+      <y>250</y>
       <width>241</width>
       <height>25</height>
      </rect>
@@ -134,8 +134,8 @@
    <widget class="QPushButton" name="button_view_certs_in_cont">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>210</y>
+      <x>790</x>
+      <y>280</y>
       <width>241</width>
       <height>25</height>
      </rect>
@@ -175,6 +175,19 @@
       <width>731</width>
       <height>221</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_get_lic">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>120</y>
+      <width>241</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Посмотреть лицензию</string>
     </property>
    </widget>
   </widget>
