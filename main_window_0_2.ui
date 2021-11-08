@@ -27,7 +27,7 @@
      <string>Загрузить сертификат</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="path_cert">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -66,7 +66,7 @@
      <string>Список контейнеров:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_list_of_cont">
+   <widget class="QPushButton" name="button_view_list_cont">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -105,7 +105,7 @@
      <string>Привязать сертификат к контейнеру</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_install">
+   <widget class="QPushButton" name="button_install_local_cert">
     <property name="geometry">
      <rect>
       <x>790</x>
@@ -177,7 +177,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_get_lic">
+   <widget class="QPushButton" name="button_view_lic">
     <property name="geometry">
      <rect>
       <x>790</x>
@@ -188,6 +188,19 @@
     </property>
     <property name="text">
      <string>Посмотреть лицензию</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_clear_output">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>750</y>
+      <width>131</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очистить консоль</string>
     </property>
    </widget>
   </widget>

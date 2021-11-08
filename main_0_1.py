@@ -7,7 +7,7 @@ from tkinter import filedialog
 # apt-get install python3-modules-tkinter
 
 
-def browse_cer():
+def browse_cer(): #[V]
     filename = filedialog.askopenfilename(initialdir="~/",
                                           title="Select a File",
                                           filetypes=(("Сертификаты",
@@ -17,7 +17,7 @@ def browse_cer():
     path_cer['text'] = filename
 
 
-def get_list_cont():
+def get_list_cont(): #[V]
     csptest = os.popen('/opt/cprocsp/bin/amd64/csptest -keyset -enum_cont -fqcn -verifyc -uniq | iconv -f cp1251').read()
     csptest=str(csptest)
     #print(csptest)
@@ -35,23 +35,23 @@ def get_list_cont():
         list_cont.insert(END, i)
 
 
-def install_cert_into_cont():
+def install_cert_into_cont(): #[v]
     textt = path_cer.cget("text")
     command_shell = "/opt/cprocsp/bin/amd64/certmgr -inst -store uMy -file " + textt + " -cont '" + list_cont.get(ACTIVE) + "'"
     try_cmd(command_shell)
 
 
-def bind_cont_to_cert():
+def bind_cont_to_cert(): #[v]
     command_shell = "/opt/cprocsp/bin/amd64/csptestf -absorb -certs -autoprov"
     try_cmd(command_shell)
 
 
-def install_local_cert():
+def install_local_cert(): #[v]
     textt = path_cer.cget("text")
     command_shell = "/opt/cprocsp/bin/amd64/certmgr -inst -file " + textt + " -store uMy"
     try_cmd(command_shell)
 
-def try_cmd(cmd):
+def try_cmd(cmd): #[v]
     try:
         outpu = subprocess.check_output(
             cmd, stderr=subprocess.STDOUT, shell=True, universal_newlines=True)
@@ -70,16 +70,16 @@ def try_cmd(cmd):
     # [ErrorCode: 0x8009001a] Контейнер не найден
     # ПРИВЯЗАТЬ -> No containers. [ErrorCode: 0x00000000]    Контейнер не вставлен в ПК
 
-def view_cryptopro_lic():
+def view_cryptopro_lic(): #[V]
     command_shell = "/opt/cprocsp/sbin/amd64/cpconfig -license -view"
     try_cmd(command_shell)
 
 
-def view_local_certs():
+def view_local_certs(): #[V]
     command_shell = "/opt/cprocsp/bin/amd64/certmgr -list -store uMy"
     try_cmd(command_shell)
 
-def view_certs_in_cont():
+def view_certs_in_cont(): #[v]
     command_shell = "/opt/cprocsp/bin/amd64/csptest -keyset -check -cont '" + list_cont.get(ACTIVE) + "'  | iconv -f cp1251"
     try_cmd(command_shell)
 
