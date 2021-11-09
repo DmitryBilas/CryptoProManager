@@ -95,7 +95,8 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
             #info_cont.insert(1.0, strings_with_substring[i] + '\n')
             strings_with_substring[i] = strings_with_substring[i][pos + 1:]
             # strings_with_substring[i] = strings_with_substring[i].replace('\\', '\\\\', 2)
-        #print(strings_with_substring)
+        print("---------")
+        print(strings_with_substring)
 
         self.list_cont.clearPropertyFlags()
         for i in range(0,self.list_cont.count()):
