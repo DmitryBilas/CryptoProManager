@@ -29,6 +29,10 @@ class MyMainWindow(QMainWindow,Ui_MainWindow):
         self.button_clear_output.clicked.connect(lambda: self.clear_output())
         self.button_exit.clicked.connect(app.exit)
 
+    def export_cert(self):
+        #command_shell = "/opt/cprocsp/bin/amd64/certmgr -export -cert -dn 'O=\"ФЕДЕРАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ \"\"АДМИНИСТРАЦИЯ ПЕЧОРСКОГО БАССЕЙНА ВНУТРЕННИХ ВОДНЫХ ПУТЕЙ\"\"\"" -dest 'certt.crt"
+        pass
+
     def clear_output(self):
         self.output.clear()
 
