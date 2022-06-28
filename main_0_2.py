@@ -11,8 +11,16 @@ import sys
 # 0x8010002c - нет личных сертифиатов
 #
 #
+#Info:
+# /opt/cprocsp/bin/amd64/certmgr -export -dest 99.cer
+# Please choose index range from 1 to %last_number
+#
+# /opt/cprocsp/bin/amd64/certmgr -export -dn 'CN=Рогова Наталья Валерьевна' -dest test.cer
+# Экспорт по поиску(dn)
 #
 #
+#
+
 class MyMainWindow(QMainWindow,Ui_MainWindow):
     def __init__(self,parent=None):
         super(MyMainWindow, self).__init__(parent)
